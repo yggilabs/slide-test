@@ -21,6 +21,13 @@ jobs:
         with:
           args: --output=output/result.pdf ${{ steps.files_list.outputs.files }}
           
+      - name: commit file
+        run: |
+          git config --global user.name 'Sam Kelley'
+          git config --global user.email 'yggilabs@users.noreply.github.com'
+          git commit -am "Automated build"
+          git push
+          
       - uses: actions/upload-artifact@master
         with:
           name: output
