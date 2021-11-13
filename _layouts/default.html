@@ -42,6 +42,7 @@
   </div>
 
   <script src="reveal.js/js/reveal.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
 
   <script>
 
@@ -51,12 +52,10 @@
         // Push each slide change to the browser history
         history: true,
         
+        plugins: [ RevealMarkdown ],
+        
         // Optional reveal.js plugins
         dependencies: [
-          // Interpret Markdown in <section> elements
-          { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-
           // Syntax highlight for <code> elements
           { src: 'reveal.js/plugin/highlight/highlight.js', async: true },
 
