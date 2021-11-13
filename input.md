@@ -1,10 +1,17 @@
-# We can be healthy
+We can be healthy
+=================
 
-## Vocab
+Vocab
+=====
 
-- Routine
-- Exercise
-- variety
+## Routine <!-- .element: class="fragment" -->
+
+
+
+## Exercise <!-- .element: class="fragment" -->
+
+Variety
+------- <!-- .element: class="fragment" -->
 
 ## Move well every day
 
