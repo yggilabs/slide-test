@@ -11,7 +11,8 @@ Vocab
 ## Exercise <!-- .element: class="fragment" -->
 
 Variety
-------- <!-- .element: class="fragment" -->
+------- 
+<!-- .element: class="fragment" -->
 
 ## Move well every day
 
