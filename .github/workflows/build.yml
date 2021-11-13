@@ -12,6 +12,11 @@ jobs:
         name: build slides
         with:
           args: --standalone -t revealjs --output=output.html input.md
+      
+      - uses: docker://pandoc/latex:2.9
+        name: build ppt
+        with:
+          args: --output=output.pptx input.md
           
       - name: commit file
         run: |
