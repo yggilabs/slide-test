@@ -11,7 +11,7 @@ jobs:
       - uses: docker://pandoc/latex:2.9
         name: build slides
         with:
-          args: -t revealjs -o output.html input.md
+          args: -t revealjs -o output.html input.md --slide-level 2
       
       - name: commit file
         run: |
