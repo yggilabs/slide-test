@@ -6,7 +6,7 @@ layout: default
 
 # Vocab
 
-## Routine
+## Routine {.fragment}
 
 ## Exercise 
 
@@ -18,7 +18,7 @@ layout: default
 
 ## Move telepathy game
 
-Show a movement activity word and count to three. Then, show the activity with your body. Students who don't match are out.
+Show a movement [activity]{.fragment} word and count to three. Then, [show]{.fragment} the activity with your body. Students who don't match are out.
 
 # Eat well every day
 
