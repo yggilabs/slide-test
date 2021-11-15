@@ -6,9 +6,9 @@ layout: default
 
 # Vocab
 
-## Routine {.fragment}
+## [Routine]{.fragment}
 
-## Exercise 
+## Exercise
 
 ## Variety
 
