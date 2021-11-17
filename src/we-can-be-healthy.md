@@ -21,7 +21,6 @@ Show a movement [activity]{.fragment} word and count to three. Then, [show]{.fra
 - variety
 - avoid unhealthy food
 
-
 # Rest well every day
 
 - enough rest
