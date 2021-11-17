@@ -22,8 +22,8 @@ jobs:
   convert-changed-files:
     runs-on: ubuntu-18.04
     strategy:
-      matrix:
-        files: ${{ fromJson(needs.find-changed-files.outputs.changed-files) }}
+      matrix: 
+        file: ['we-can-be-healthy']
     steps:          
       - uses: actions/checkout@v2      
           
@@ -33,14 +33,14 @@ jobs:
           args: >-
             -t revealjs 
             --template custom 
-            -o output.html 
-            input.md 
-            --slide-level 2
+            -o docs/${{ matrix.file }}.html
+            ${{ matrix.file }}.md
+            --slide-level 2            
       
       - name: commit file
         run: |
           git config --global user.name 'Sam Kelley'
           git config --global user.email 'yggilabs@users.noreply.github.com'
-          git add output.html
+          git add docs/${{ matrix.file }}.html
           git commit -am "Automated build"
           git push
