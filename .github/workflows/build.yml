@@ -17,14 +17,14 @@ jobs:
       - name: Get changed files
         id: changed-files
         uses: tj-actions/changed-files@v11.5
-        with:
-          separator: ","
+
     outputs:
       changed-files: ${{ steps.changed-files.outputs.all_modified_files }}
   convert-changed-files:
     runs-on: ubuntu-18.04
     strategy:
-      matrix: ${{ needs.find-changed-files.outputs.changed-files }}
+      matrix:
+        files: ${{ needs.find-changed-files.outputs.changed-files }}
     steps:          
       - uses: actions/checkout@v2      
           
