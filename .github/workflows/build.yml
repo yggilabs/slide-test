@@ -25,7 +25,11 @@ jobs:
       matrix: 
         file: ['we-can-be-healthy']
     steps:          
-      - uses: actions/checkout@v2      
+      - uses: actions/checkout@v2     
+      
+      - name: set folders
+        run: |
+          mkdir docs        
           
       - uses: docker://pandoc/latex:2.16
         name: build slides
