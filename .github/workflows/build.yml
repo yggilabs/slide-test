@@ -7,9 +7,9 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: template
-        run: |
-          ls ~/.pandoc
+        run: |          
           echo "---\n---\n$body$" > custom.revealjs
+          ls
           
       - uses: actions/checkout@v2
 
