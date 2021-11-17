@@ -11,7 +11,9 @@ jobs:
       - name: template
         run: |          
           echo "---
+          layout: default
           ---
+          
           $body$" > custom.revealjs
 
       - uses: docker://pandoc/latex:2.16
