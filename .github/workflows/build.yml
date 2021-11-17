@@ -8,6 +8,7 @@ jobs:
     steps:
       - name: template
         run: |
+          ls ~/.pandoc
           echo "---\n---\n$body$" > custom.revealjs
           
       - uses: actions/checkout@v2
