@@ -1,0 +1,10 @@
+name: submodule-setup
+
+on: workflow_dispatch
+      
+jobs:
+  submodule-setup:
+    runs-on: ubuntu-18.04
+      run: |
+        git submodule add https://github.com/hakimel/reveal.js.git src/reveal.js
+        git submodule update --init --recursive
