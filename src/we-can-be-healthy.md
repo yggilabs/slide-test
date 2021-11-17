@@ -30,6 +30,7 @@ Show a movement [activity]{.fragment} word and count to three. Then, [show]{.fra
 
 # Break time!
 
+
 # Activity
 
 ## Let's make an activity log
