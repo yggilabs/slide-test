@@ -38,5 +38,4 @@ Show a movement [activity]{.fragment} word and count to three. Then, [show]{.fra
 * track goal
 
 
-
 # Clean up time!
