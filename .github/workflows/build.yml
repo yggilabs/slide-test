@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: template
         run: |
-          echo "---\n---\n$body$" > custom.html
+          echo "---\n---\n$body$" > custom.revealjs
           
       - uses: actions/checkout@v2
 
