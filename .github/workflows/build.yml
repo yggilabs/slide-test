@@ -6,12 +6,16 @@ jobs:
   convert_via_pandoc:
     runs-on: ubuntu-18.04
     steps:
+      - name: template
+        run: |
+          echo "---\n---\n$body$" > template.html
+          
       - uses: actions/checkout@v2
 
       - uses: docker://pandoc/latex:2.9
         name: build slides
         with:
-          args: -t revealjs -o output.html input.md --slide-level 2
+          args: -t revealjs -template template.html -o output.html input.md --slide-level 2
       
       - name: commit file
         run: |
