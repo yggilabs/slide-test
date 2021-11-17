@@ -8,15 +8,14 @@ jobs:
     steps:
       - name: template
         run: |
-          mkdir templates
-          echo "---\n---\n$body$" > templates/custom.revealjs
+          echo "---\n---\n$body$" > custom.revealjs
           
       - uses: actions/checkout@v2
 
       - uses: docker://pandoc/latex:2.9
         name: build slides
         with:
-          args: -t revealjs --data-dir= ./ --template custom -o output.html input.md --slide-level 2
+          args: -t revealjs --template ./custom -o output.html input.md --slide-level 2
       
       - name: commit file
         run: |
