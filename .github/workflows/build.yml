@@ -34,7 +34,7 @@ jobs:
             -t revealjs 
             --template custom 
             -o docs/${{ matrix.file }}.html
-            ${{ matrix.file }}.md
+            src/${{ matrix.file }}.md
             --slide-level 2            
       
       - name: commit file
