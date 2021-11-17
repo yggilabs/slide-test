@@ -10,4 +10,9 @@ jobs:
       
       - run: |
           git submodule add https://github.com/hakimel/reveal.js.git src/reveal.js
+          git config --global user.name 'Sam Kelley'
+          git config --global user.email 'yggilabs@users.noreply.github.com'
+          git add *
+          git commit -am "Automated build"
+          git push
           git submodule update --init --recursive
