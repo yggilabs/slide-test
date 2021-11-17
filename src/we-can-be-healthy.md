@@ -34,6 +34,7 @@ Show a movement [activity]{.fragment} word and count to three. Then, [show]{.fra
 
 ## Let's make an activity log
 
+
 * set a goal
 * track goal
 
