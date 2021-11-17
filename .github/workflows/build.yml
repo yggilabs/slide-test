@@ -5,18 +5,22 @@ on: workflow_dispatch
 jobs:
   convert_via_pandoc:
     runs-on: ubuntu-18.04
-    steps:
+    steps:          
+      - uses: actions/checkout@v2
+      
       - name: template
         run: |          
           echo "---\n---\n$body$" > custom.revealjs
-          ls
-          
-      - uses: actions/checkout@v2
 
       - uses: docker://pandoc/latex:2.16
         name: build slides
         with:
-          args: -t revealjs --template /github/workspace/custom -o output.html input.md --slide-level 2
+          args: >-
+            -t revealjs 
+            --template custom 
+            -o output.html 
+            input.md 
+            --slide-level 2
       
       - name: commit file
         run: |
