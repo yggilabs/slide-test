@@ -1,7 +1,3 @@
----
-layout: default
----
-
 # We can be healthy
 
 # Vocab
