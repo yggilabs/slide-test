@@ -10,7 +10,9 @@ jobs:
       
       - name: template
         run: |          
-          echo "---\n---\n$body$" > custom.revealjs
+          echo "---
+          ---
+          $body$" > custom.revealjs
 
       - uses: docker://pandoc/latex:2.16
         name: build slides
