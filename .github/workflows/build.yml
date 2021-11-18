@@ -75,7 +75,8 @@ jobs:
           echo "::set-output name=matrix::$( echo "$JSON" )"
 
   build:
-    runs-on: ubuntu-18.04
+    name: Build "${{ matrix.directory }}" on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
     needs: generate-matrix
     strategy:
       matrix: ${{fromJson(needs.generate-matrix.outputs.matrix)}}
