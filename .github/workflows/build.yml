@@ -55,7 +55,7 @@ jobs:
           echo "::set-output name=matrix::$( echo "$JSON" )"
 
   build:
-    name: Build "${{ matrix.directory }}" on ${{ matrix.os }}
+    name: Build "${{ matrix.input }}" to "${{ matrix.output }}"
     runs-on: ubuntu-latest
     needs: generate-matrix
     strategy:
