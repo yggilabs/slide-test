@@ -42,7 +42,7 @@ jobs:
           do
             strip_src=${item#src/}
             strip_ext=${strip_src%%.*}
-            JSONline="{\"in\":\"$item\",\"out\":\"docs/$strip_ext.html\"},"
+            JSONline="{\"input\":\"$item\",\"output\":\"docs/$strip_ext.html\"},"
             JSON=$JSON$JSONline
           done
 
@@ -73,8 +73,8 @@ jobs:
           args: >-
             -t revealjs 
             --template custom 
-            -o ${{ matrix.file.output }}
-            ${{ matrix.file.input }}
+            -o ${{ matrix.output }}
+            ${{ matrix.input }}
             --slide-level 2            
       
       - name: commit file
