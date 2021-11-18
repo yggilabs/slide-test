@@ -14,7 +14,7 @@ jobs:
       - name: Get changed files
         id: changed-files
         run: |
-          run: echo "::set-output name=matrix::{\"include\":[{\"project\":\"foo\",\"config\":\"Debug\"},{\"project\":\"bar\",\"config\":\"Release\"}]}"
+          echo "::set-output name=matrix::{\"include\":[{\"project\":\"foo\",\"config\":\"Debug\"},{\"project\":\"bar\",\"config\":\"Release\"}]}"
     outputs:
       matrix: ${{steps.changed-files.outputs.matrix}}
   convert-changed-files:
