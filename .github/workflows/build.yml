@@ -20,8 +20,7 @@ jobs:
   convert-changed-files:
     runs-on: ubuntu-18.04
     strategy:
-      matrix: 
-        file: ${{fromJson(needs.find-changed-files.outputs.matrix)}}
+      matrix: ${{fromJson(needs.find-changed-files.outputs.matrix)}}
     steps:          
       - uses: actions/checkout@v2     
       
