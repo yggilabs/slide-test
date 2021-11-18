@@ -14,13 +14,14 @@ jobs:
       - name: Get changed files
         id: changed-files
         run: |
-          echo "::set-output name=all_changed_files::[{\"output\":\"docs/we-can-be-healthy.html\",\"input\":\"src/we-can-be-healthy.md\"}]"
+          echo "::set-output name=matrix::[{\"output\":\"docs/we-can-be-healthy.html\",\"input\":\"src/we-can-be-healthy.md\"}]"
     outputs:
-      matrix: ${{steps.changed-files.outputs.all_changed_files}}
+      matrix: ${{steps.changed-files.outputs.matrix}}
   convert-changed-files:
     runs-on: ubuntu-18.04
     strategy:
-      matrix: ${{fromJson(needs.find-changed-files.outputs.matrix)}}
+      matrix: 
+        file: ${{fromJson(needs.find-changed-files.outputs.matrix)}}
     steps:          
       - uses: actions/checkout@v2     
       
