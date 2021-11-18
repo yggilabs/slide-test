@@ -1,6 +1,6 @@
 # We can be healthy
 
-# Vocab
+# Vocab {data-background-color="aquamarine"}
 
 ## [Routine]{.fragment}
 
