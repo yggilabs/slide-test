@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-18.04
     strategy:
       matrix: 
-        file: ${{ fromJson(needs.find-changed-files.outputs.files) }}
+        file: ${{ fromJson(needs.find-changed-files.outputs.matrix) }}
     steps:          
       - uses: actions/checkout@v2     
       
