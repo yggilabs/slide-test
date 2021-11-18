@@ -8,7 +8,6 @@
 
 ## Exercise
 
-
 ## Variety
 
 # Move well every day
