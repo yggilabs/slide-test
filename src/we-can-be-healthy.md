@@ -4,6 +4,7 @@
 
 ## [Routine]{.fragment}
 
+
 ![healthy food](https://www.morelandobgyn.com/hs-fs/hubfs/Imported_Blog_Media/GettyImages-854725402-1.jpg?width=400&name=GettyImages-854725402-1.jpg)
 
 ## Exercise
