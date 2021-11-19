@@ -2,6 +2,8 @@
 layout: default
 ---
 
-<!-- auto-generated file; do not edit; -->
+{% comment %}
+auto-generated file; do not edit;
+{% endcomment %}
 
 $body$
