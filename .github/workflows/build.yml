@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - 'src/**.md'
-      
+
 jobs:
   generate-matrix:
     name: Generate matrix for build
@@ -55,28 +55,40 @@ jobs:
           echo "::set-output name=matrix::$( echo "$JSON" )"
 
   build:
-    name: Build "${{ matrix.input }}" to "${{ matrix.output }}"
+    name: Converting "${{ matrix.input }}" to "${{ matrix.output }}"
     runs-on: ubuntu-latest
     needs: generate-matrix
     strategy:
       matrix: ${{fromJson(needs.generate-matrix.outputs.matrix)}}
-    steps:          
-      - uses: actions/checkout@v2     
-      
-      - name: set folders
+    steps:
+      # get access to git repo
+      - uses: actions/checkout@v2
+        name: git setup
+
+      # we need node for linting
+      - uses: actions/setup-node@v2
+        name: node setup
+        with:
+          node-version: '14'
+          cache: 'npm'
+
+      # lint first before all the conversion overhead. fail fast
+      - name: lint
         run: |
-          mkdir -p docs        
-          
+          npm install --global textlint
+          npm install --global textlint-rule-no-todo
+          textlint ${{ matrix.input }}
+
       - uses: docker://pandoc/latex:2.16
         name: build slides
         with:
           args: >-
-            -t revealjs 
-            --template custom 
+            -t revealjs
+            --template custom
             -o ${{ matrix.output }}
             ${{ matrix.input }}
-            --slide-level 2            
-      
+            --slide-level 2
+
       - name: commit file
         run: |
           git config --global user.name 'Sam Kelley'
