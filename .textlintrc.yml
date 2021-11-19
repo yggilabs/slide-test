@@ -1,0 +1,4 @@
+rules:
+  no-todo: true
+  alex: true
+  stop-words: true
