@@ -87,7 +87,7 @@ jobs:
           git commit -am "Automated build"
           git push
 
-      - uses: docker://pandoc:2.16
+      - uses: docker://pandoc/latex:2.16
         name: build slides
         with:
           args: >-
