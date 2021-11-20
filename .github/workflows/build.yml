@@ -71,23 +71,23 @@ jobs:
         with:
           node-version: '14'
           cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
+      - run: npm install
 
       # lint first before all the conversion overhead. fail fast
       - name: lint
         run: |
-          npm install --global textlint
-          npm install --global textlint-rule-no-todo
-          npm install --global textlint-rule-alex
-          npm install --global textlint-rule-stop-words
-          
+          npm install textlint
+          npm install textlint-rule-no-todo
+          npm install textlint-rule-alex
+          npm install textlint-rule-stop-words          
           git config --global user.name 'Sam Kelley'
           git config --global user.email 'yggilabs@users.noreply.github.com'
-          git add node_modules/*
           git add package-lock.json
           git commit -am "Automated build"
           git push
 
-      - uses: docker://pandoc/latex:2.16
+      - uses: docker://pandoc:2.16
         name: build slides
         with:
           args: >-
