@@ -2,7 +2,6 @@
 
 # Vocab {data-background-color="aquamarine"}
 
-a
 
 ## [Routine]{.fragment}
 
