@@ -70,6 +70,7 @@ jobs:
         name: node setup
         with:
           node-version: '14'
+          cache: npm
           
       - name: clean
         run: npm cache clean --force
