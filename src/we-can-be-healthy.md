@@ -33,11 +33,30 @@ Show a movement [activity]{.fragment} word and count to three. Then, [show]{.fra
 
 # Break time!
 
-# Activity
+# Activity: Let's Build a Food Pyramid!
 
-## Let's make an activity log
+A food pyramid shows many different foods aranged into a triangle. 
+At the base of the pyrimid are foods you sould eat a lot of. 
+Near the top of the pyramid are foods you should eat less.
 
-* set a goal
-* track goal
+## Step 1: Color
+
+Color your food pyramid and foods.
+
+Draw your own favorite food if you can't find it.
+
+![Colored Worksheet]()
+
+## Step 2: Cut
+
+Cut out food pyramid and foods.
+
+![Cut-up Worksheet]()
+
+## Step 3: Paste
+
+Paste your foods onto the food pyramid in the correct place.
+
+![Pasted Worksheet]()
 
 # Clean up time!
