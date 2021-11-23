@@ -70,8 +70,7 @@ jobs:
         name: node setup
         with:
           node-version: '14'
-          cache: 'npm'
-
+          
       # lint first before all the conversion overhead. fail fast
       - name: lint
         run: |
