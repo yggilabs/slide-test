@@ -70,11 +70,9 @@ jobs:
         name: node setup
         with:
           node-version: '14'
-          cache: npm
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
           
-      - name: clean
-        run: npm cache clean --force
-        
       # lint first before all the conversion overhead. fail fast
       - name: lint
         run: |
