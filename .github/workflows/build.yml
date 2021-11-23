@@ -72,7 +72,6 @@ jobs:
           node-version: '14'
           cache: 'npm'
           cache-dependency-path: '**/package-lock.json'
-      - run: npm install
 
       # lint first before all the conversion overhead. fail fast
       - name: lint
