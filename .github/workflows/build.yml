@@ -71,6 +71,9 @@ jobs:
         with:
           node-version: '14'
           
+      - name: clean
+        run: npm cache clean --force
+        
       # lint first before all the conversion overhead. fail fast
       - name: lint
         run: |
