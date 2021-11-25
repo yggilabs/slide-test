@@ -14,7 +14,6 @@
 
 ## Ways to move
 
-
 ## Move telepathy game
 
 Show a movement [activity]{.fragment} word and count to three. Then, [show]{.fragment} the activity with your body. Students who don't match are out.
