@@ -78,10 +78,6 @@ jobs:
           npm install textlint-rule-no-todo
           npm install textlint-rule-alex
           npm install textlint-rule-stop-words          
-          git config --global user.name 'Sam Kelley'
-          git config --global user.email 'yggilabs@users.noreply.github.com'
-          git commit -am "Automated build"
-          git push
 
       - uses: docker://pandoc/latex:2.16
         name: build slides
