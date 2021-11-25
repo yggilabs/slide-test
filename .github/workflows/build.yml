@@ -69,7 +69,7 @@ jobs:
       - uses: actions/setup-node@v2
         name: node setup
         with:
-          node-version: '14'
+          node-version: '13'
           cache: 'npm'
           cache-dependency-path: package-lock.json
           
